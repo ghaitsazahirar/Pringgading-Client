@@ -1,0 +1,269 @@
+@import "bootstrap/scss/bootstrap";
+
+* {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-variation-settings: "slnt" 0;
+}
+
+/* Navbar */
+.navbar {
+  position: fixed; /* Make the navbar fixed */
+  top: 0; /* Align it to the top of the page */
+  width: 100%; /* Ensure the navbar spans the full width of the page */
+  z-index: 1000; /* Ensure it is above other elements */
+  background-color: #fff; /* Background color of the navbar */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow for better visibility */
+}
+
+.navbar-brand img {
+  height: 100px; /* Adjust the height of the logo as needed */
+}
+
+.navbar-nav .nav-link {
+  color: #000; /* Adjust the color of the nav links as needed */
+}
+
+.navbar-nav .nav-link:hover {
+  color: rgba(35, 59, 40, 0.5); /* Adjust the hover color of the nav links as needed */
+}
+
+.navbar-toggler {
+  border-color: #000; /* Adjust the color of the toggle button border */
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba%280, 0, 0, 0.5%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+.form-control {
+  width: 200px; /* Adjust the width of the search input as needed */
+}
+
+.btn-outline-success {
+  color: rgba(35, 59, 40, 0.5);
+  border-color: rgba(35, 59, 40, 0.5);
+}
+
+.btn-outline-success:hover {
+  background-color: rgba(35, 59, 40, 0.5);
+  color: #fff;
+  border-color: rgba(35, 59, 40, 0.5);
+}
+
+/* Add padding to the body to avoid content being hidden behind the navbar */
+body {
+  padding-top: 100px; /* Adjust this value to the height of your navbar */
+}
+
+
+/* Hero Image */
+.hero img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.about-pringgading {
+  padding: 20px;
+  text-align: center;
+}
+
+/* Gallery */
+.gallery {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end; /* Align items at the end */
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .gallery img {
+    width: 250px;
+    height: auto;
+    border: 5px solid black; /* Black border for each image */
+  }
+  
+  .gallery .gallery-2 {
+    align-self: flex-start; /* Position the middle image higher */
+    margin-bottom: -200px; /* Adjust the value to position it higher */
+  }
+
+/* Background Image */
+main, footer {
+  position: relative;
+  background-image: url('../public/assets/img/footer.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+main::before, footer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Footer */
+footer {
+    background-color: rgba(35, 59, 40, 0.9); /* Semi-transparent background color */
+    color: white; /* Text color for the footer */
+    position: relative;
+    z-index: 1;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+footer h5 {
+  color: #ffc107; /* Color for the headings */
+}
+
+footer p {
+    line-height: 1.6; /* Adjust line height for readability */
+}
+
+footer a {
+  color: #ffc107; /* Color for the links */
+  text-decoration: none; /* Remove underline from links */
+}
+
+footer a:hover {
+  text-decoration: underline; /* Underline links on hover */
+}
+
+.list-inline-item .btn-floating {
+  font-size: 20px; /* Font size for the social media icons */
+  color: white; /* Color for the social media icons */
+}
+
+.list-inline-item .btn-floating:hover {
+  color: #ffc107; /* Hover color for the social media icons */
+}
+
+.about-pringgading {
+  text-align: left;
+}
+
+/*KEGIATAN*/
+#activity-detail{
+  padding-top: 20px;
+}
+
+.activity-container {
+  padding-top: 20px;
+  margin: 20px;
+}
+
+.activity {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+
+.activity img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px 5px 0 0;
+}
+
+.activity h2 {
+  font-size: 1.5em;
+  margin: 10px 0;
+}
+
+.activity p {
+  font-size: 1em;
+  color: #666;
+}
+
+.card-deck {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+/* Styling untuk card layout landscape */
+.card {
+  display: flex;
+  flex-direction: row;
+  margin: 20px 0;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.card img {
+  width: 300px; /* Lebar gambar lebih kecil */
+  height: auto;
+  object-fit: cover;
+}
+
+.card-body {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.card-title {
+  font-size: 1.25rem;
+  margin-bottom: 10px;
+}
+
+.card-text {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Styling untuk video section */
+.video-section {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 20px;
+  gap: 20px;
+}
+
+.video-section iframe {
+  width: 400px; /* Lebar video lebih kecil */
+  height: 300px;
+  flex-shrink: 0;
+  max-width: 100%;
+}
+
+.video-section button {
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+/* Media queries untuk responsif */
+@media (max-width: 768px) {
+  .video-section {
+      flex-direction: column;
+      align-items: stretch;
+  }
+
+  .video-section button {
+      margin-top: 10px;
+      width: 100%;
+  }
+}
+
+/* Padding untuk teks di bagian Integrated Farming */
+#integrated-farming {
+  padding-top: 30px; /* Tambahkan padding di atas */
+}
+
+#integrated-farming p {
+  padding-top: 20px; /* Tambahkan padding di atas teks */
+}
