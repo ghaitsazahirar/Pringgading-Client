@@ -11,6 +11,12 @@ module.exports = {
     kegiatan: "./src/scripts/kegiatan.js",
     detailkegiatan: "./src/scripts/detailkegiatan.js",
     program: "./src/scripts/program.js",
+    jadwal: "./src/scripts/jadwal.js",
+    jenislayanan: "./src/scripts/jenislayanan.js",
+    login: "./src/scripts/login.js",
+    lupapassword: "./src/scripts/lupapassword.js",
+    pembayaran: "./src/scripts/pembayaran.js",
+    langganan: "./src/scripts/langganan.js",
   },
   output: {
     filename: "[name].bundle.js",
@@ -83,6 +89,36 @@ module.exports = {
       filename: 'program.html',
       template: path.resolve(__dirname, 'src/templates/program.html'),
       chunks: ['program'],
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'jadwal.html',
+      template: path.resolve(__dirname, 'src/templates/jadwal.html'),
+      chunks: ['jadwal'],
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'jenislayanan.html',
+      template: path.resolve(__dirname, 'src/templates/jenislayanan.html'),
+      chunks: ['jenislayanan'],
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'langganan.html',
+      template: path.resolve(__dirname, 'src/templates/langganan.html'),
+      chunks: ['langganan'],
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'login.html',
+      template: path.resolve(__dirname, 'src/templates/login.html'),
+      chunks: ['login'],
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'lupapassword.html',
+      template: path.resolve(__dirname, 'src/templates/lupapassword.html'),
+      chunks: ['lupapassword'],
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'pembayaran.html',
+      template: path.resolve(__dirname, 'src/templates/pembayaran.html'),
+      chunks: ['pembayaran'],
     }),
     new CopyWebpackPlugin({
       patterns: [

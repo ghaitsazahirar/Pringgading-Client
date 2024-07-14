@@ -1,7 +1,7 @@
 {
   "name": "mpti-new",
   "version": "1.0.0",
-  "description": "",
+  "description": "How to Use?\r 1. Install NPM\r 2. Open this on the one folder\r 3. open your terminal in the folder\r 4. write in terminal 'npm init --y'\r 5. write in terminal 'npm run build'\r 6. write in terminal 'npm run start-dev'",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
