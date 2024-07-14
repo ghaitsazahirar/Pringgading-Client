@@ -17,6 +17,7 @@ module.exports = {
     lupapassword: "./src/scripts/lupapassword.js",
     pembayaran: "./src/scripts/pembayaran.js",
     langganan: "./src/scripts/langganan.js",
+    admin: "./src/scripts/admin.js",
   },
   output: {
     filename: "[name].bundle.js",
@@ -119,6 +120,11 @@ module.exports = {
       filename: 'pembayaran.html',
       template: path.resolve(__dirname, 'src/templates/pembayaran.html'),
       chunks: ['pembayaran'],
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'admin.html',
+      template: path.resolve(__dirname, 'src/templates/admin.html'),
+      chunks: ['admin'],
     }),
     new CopyWebpackPlugin({
       patterns: [
