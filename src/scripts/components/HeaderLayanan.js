@@ -38,21 +38,6 @@ class Header extends HTMLElement {
           <div class="hero">
             <img src="assets/img/header2.png" alt="Hero Image">
         </div>
-
-        <div class="center-container">
-        <div class="center-btn-group">
-            <div class="btn-group">
-                <button class="btn btn-secondary btn-lg dropdown-toggle btn-custom" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Pilih
-                </button>
-                <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="jenislayanan.html">Jenis Layanan</a></li>
-                    <li><a class="dropdown-item" href="jadwal.html">Opsi Waktu</a></li>
-                    <li><a class="dropdown-item" href="pembayaran.html">Metode Pembayaran</a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
         `;
     }
 }

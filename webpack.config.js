@@ -18,6 +18,8 @@ module.exports = {
     pembayaran: "./src/scripts/pembayaran.js",
     langganan: "./src/scripts/langganan.js",
     admin: "./src/scripts/admin.js",
+    skalamingguan: "./src/scripts/skalamingguan.js",
+    skalaharian: "./src/scripts/skalaharian.js",
   },
   output: {
     filename: "[name].bundle.js",
@@ -125,6 +127,16 @@ module.exports = {
       filename: 'admin.html',
       template: path.resolve(__dirname, 'src/templates/admin.html'),
       chunks: ['admin'],
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'skalamingguan.html',
+      template: path.resolve(__dirname, 'src/templates/skalamingguan.html'),
+      chunks: ['skalamingguan'],
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'skalaharian.html',
+      template: path.resolve(__dirname, 'src/templates/skalaharian.html'),
+      chunks: ['skalaharian'],
     }),
     new CopyWebpackPlugin({
       patterns: [

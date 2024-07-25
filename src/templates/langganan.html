@@ -15,6 +15,7 @@
     <!-- Async and defer non-essential scripts -->
     <script src="https://use.fontawesome.com/b070c8f1df.js" async></script>
     <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous" defer></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -25,27 +26,51 @@
 <body>
     
     <main>
-        <section class="transaction-table">
-            <table>
-                <thead>
-                    <tr>
-                        <th>NO</th>
-                        <th>Transaksi</th>
-                        <th>Status</th>
-                        <th>Detail</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>1</td> 
-                        <td>Transaksi 1</td>
-                        <td>Selesai</td>
-                        <td><button>Detail</button></td>
-                    </tr>
-                    <!-- Tambahkan baris transaksi lainnya di sini -->
-                </tbody>
-            </table>
-        </section>
+        <div class="container mt-5">
+            <div class="card-transaksi shadow-lg">
+                <div class="card-header bg-success text-white text-center">
+                    <h2>Riwayat Transaksi</h2>
+                </div>
+                <div class="card-body">
+                    <table class="table table-bordered" id="riwayat-transaksi">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th>NO</th>
+                                <th>Transaksi</th>
+                                <th>Status</th>
+                                <th>Detail</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Riwayat transaksi akan muncul di sini -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    
+        <div class="text-layanan text-center pt-5 pb-5">
+            <h2>PILIH WAKTU PENGANGKUTAN SAMPAH MU</h2>
+            <p>Bersihkan sampahmu dengan berlangganan angkut sampah bersama kami</p>
+            
+            <div class="subscription-layanan pt-5 pb-5">
+                <div class="option-layanan">
+                    <div class="image-layanan">
+                        <img src="assets/img/truk.png" alt="Skala Mingguan">
+                        <span class="text-layanan">Skala Harian</span>
+                    </div>
+                    <button class="select-button-layanan" data-target="skalaharian.html">Pilih</button>
+                </div>
+                <div class="option-layanan">
+                    <div class="image-layanan">
+                        <img src="assets/img/truk.png" alt="Skala Bulanan">
+                        <span class="text-layanan">Skala Mingguan</span>
+                    </div>
+                    <button class="select-button-layanan" data-target="skalamingguan.html">Pilih</button>
+                </div>
+            </div>
+            
+        </div>
     </main>
 
    <custom-footer></custom-footer>
