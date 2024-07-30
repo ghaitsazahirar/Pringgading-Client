@@ -131,31 +131,10 @@ main::before, footer::before {
 }
 
 /* Footer */
-footer {
-    background-color: rgba(35, 59, 40, 0.9); /* Semi-transparent background color */
-    color: white; /* Text color for the footer */
-    position: relative;
-    z-index: 1;
-    padding-top: 10px;
-    padding-bottom: 10px;
-  }
-
-footer h5 {
-  color: #ffc107; /* Color for the headings */
+footer{
+  background-color: #233B28;
 }
 
-footer p {
-    line-height: 1.6; /* Adjust line height for readability */
-}
-
-footer a {
-  color: #ffc107; /* Color for the links */
-  text-decoration: none; /* Remove underline from links */
-}
-
-footer a:hover {
-  text-decoration: underline; /* Underline links on hover */
-}
 
 .list-inline-item .btn-floating {
   font-size: 20px; /* Font size for the social media icons */
