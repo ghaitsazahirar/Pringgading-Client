@@ -25,88 +25,71 @@
 <body>
     
     <main>
-        <div class="container my-5">
-            <div class="row justify-content-center">
-                <div class="col-md-8">
-                    <div class="card text-center shadow-lg">
-                        <div class="card-header bg-success text-white">
-                            <h2 class="m-0">Skala Mingguan</h2>
+        <div class="container mt-5">
+            <!-- Form Skala Mingguan -->
+            <div class="card">
+                <div class="card-header bg-success text-white text-center">
+                    <h2>Pilih Waktu Pengangkutan Sampah</h2>
+                </div>
+                <div class="card-body">
+                    <div class="text-center mb-4">
+                        <h3 class="text-secondary">Skala Mingguan</h3>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <h4>Hari</h4>
+                            <div id="hari-buttons" class="btn-group btn-group-toggle" data-toggle="buttons">
+                                <label class="btn btn-outline-success m-1">
+                                    <input type="radio" name="hari" autocomplete="off" value="Senin" onclick="selectDay('Senin')"> Senin
+                                </label>
+                                <label class="btn btn-outline-success m-1">
+                                    <input type="radio" name="hari" autocomplete="off" value="Selasa" onclick="selectDay('Selasa')"> Selasa
+                                </label>
+                                <label class="btn btn-outline-success m-1">
+                                    <input type="radio" name="hari" autocomplete="off" value="Rabu" onclick="selectDay('Rabu')"> Rabu
+                                </label>
+                                <label class="btn btn-outline-success m-1">
+                                    <input type="radio" name="hari" autocomplete="off" value="Kamis" onclick="selectDay('Kamis')"> Kamis
+                                </label>
+                                <label class="btn btn-outline-success m-1">
+                                    <input type="radio" name="hari" autocomplete="off" value="Jumat" onclick="selectDay('Jumat')"> Jumat
+                                </label>
+                                <label class="btn btn-outline-success m-1">
+                                    <input type="radio" name="hari" autocomplete="off" value="Sabtu" onclick="selectDay('Sabtu')"> Sabtu
+                                </label>
+                                <label class="btn btn-outline-success m-1">
+                                    <input type="radio" name="hari" autocomplete="off" value="Minggu" onclick="selectDay('Minggu')"> Minggu
+                                </label>
+                            </div>
                         </div>
-                        <div class="card-body">
-                            <div class="text-center mb-4">
-                                <h3 class="text-secondary">Pilih Waktu Pengangkutan Sampah</h3>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-6 mb-3">
-                                    <h4>Hari</h4>
-                                    <div id="hari-buttons" class="btn-group btn-group-toggle" data-toggle="buttons">
-                                        <div class="row">
-                                            <div class="col-4">
-                                                <label class="btn btn-outline-success m-1">
-                                                    <input type="radio" name="hari" autocomplete="off" value="Senin" onclick="selectDay('Senin')"> Senin
-                                                </label>
-                                            </div>
-                                            <div class="col-4">
-                                                <label class="btn btn-outline-success m-1">
-                                                    <input type="radio" name="hari" autocomplete="off" value="Selasa" onclick="selectDay('Selasa')"> Selasa
-                                                </label>
-                                            </div>
-                                            <div class="col-4">
-                                                <label class="btn btn-outline-success m-1">
-                                                    <input type="radio" name="hari" autocomplete="off" value="Rabu" onclick="selectDay('Rabu')"> Rabu
-                                                </label>
-                                            </div>
-                                            <div class="col-4">
-                                                <label class="btn btn-outline-success m-1">
-                                                    <input type="radio" name="hari" autocomplete="off" value="Kamis" onclick="selectDay('Kamis')"> Kamis
-                                                </label>
-                                            </div>
-                                            <div class="col-4">
-                                                <label class="btn btn-outline-success m-1">
-                                                    <input type="radio" name="hari" autocomplete="off" value="Jumat" onclick="selectDay('Jumat')"> Jumat
-                                                </label>
-                                            </div>
-                                            <div class="col-4">
-                                                <label class="btn btn-outline-success m-1">
-                                                    <input type="radio" name="hari" autocomplete="off" value="Sabtu" onclick="selectDay('Sabtu')"> Sabtu
-                                                </label>
-                                            </div>
-                                            <div class="col-4">
-                                                <label class="btn btn-outline-success m-1">
-                                                    <input type="radio" name="hari" autocomplete="off" value="Minggu" onclick="selectDay('Minggu')"> Minggu
-                                                </label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 mb-3">
-                                    <h4>Jam</h4>
-                                    <div id="jam-buttons" class="btn-group btn-group-toggle" data-toggle="buttons">
-                                        <label class="btn btn-outline-success m-1">
-                                            <input type="radio" name="jam" autocomplete="off" value="08:45" onclick="selectTime('08:45')"> 08:45
-                                        </label>
-                                        <label class="btn btn-outline-success m-1">
-                                            <input type="radio" name="jam" autocomplete="off" value="14:00" onclick="selectTime('14:00')"> 14:00
-                                        </label>
-                                        <label class="btn btn-outline-success m-1">
-                                            <input type="radio" name="jam" autocomplete="off" value="16:00" onclick="selectTime('16:00')"> 16:00
-                                        </label>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="text-center">
-                                <button class="btn btn-success mt-4" onclick="saveTransaction()">Simpan</button>
+                        <div class="col-md-6 mb-3">
+                            <h4>Jam</h4>
+                            <div id="jam-buttons" class="btn-group btn-group-toggle" data-toggle="buttons">
+                                <label class="btn btn-outline-success m-1">
+                                    <input type="radio" name="jam" autocomplete="off" value="08:45" onclick="selectTime('08:45')"> 08:45
+                                </label>
+                                <label class="btn btn-outline-success m-1">
+                                    <input type="radio" name="jam" autocomplete="off" value="14:00" onclick="selectTime('14:00')"> 14:00
+                                </label>
+                                <label class="btn btn-outline-success m-1">
+                                    <input type="radio" name="jam" autocomplete="off" value="16:00" onclick="selectTime('16:00')"> 16:00
+                                </label>
                             </div>
                         </div>
                     </div>
+                    <div class="text-center">
+                        <button class="btn btn-success mt-4" onclick="saveTransaction()">Simpan</button>
+                    </div>
                 </div>
             </div>
+            
             <div class="row justify-content-center mt-4">
                 <div class="col-md-6 text-center">
                     <h1 class="display-6">Tuntaskan Sampahmu Bersama Layanan Kami !</h1>
                 </div>
             </div>
         </div>
+    
     </main>
 
    <custom-footer></custom-footer>

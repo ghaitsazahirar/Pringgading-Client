@@ -8,13 +8,12 @@ import Alert from 'bootstrap/js/dist/alert'
 import { Tooltip, Toast, Popover } from 'bootstrap'
 
 // src/scripts/langganan.js
-document.addEventListener('DOMContentLoaded', (event) => {
-    document.querySelectorAll('.select-button-layanan').forEach(button => {
-        button.addEventListener('click', (event) => {
-            const targetUrl = event.currentTarget.getAttribute('data-target');
-            if (targetUrl) {
-                window.location.href = targetUrl;
-            }
+document.addEventListener("DOMContentLoaded", function() {
+    const buttons = document.querySelectorAll(".select-button-layanan");
+    buttons.forEach(button => {
+        button.addEventListener("click", function() {
+            const target = button.getAttribute("data-target");
+            window.location.href = target;
         });
     });
 });

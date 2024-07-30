@@ -766,3 +766,42 @@ th {
       flex-direction: column;
   }
 }
+
+.card-header {
+  padding: 15px;
+  border-bottom: none;
+}
+
+.card-body {
+  padding: 30px;
+}
+
+.btn-group-toggle {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.btn-group-toggle .btn {
+  flex: 1 1 calc(33.333% - 10px); /* Mengatur lebar tombol agar sejajar */
+  margin: 5px;
+  text-align: center;
+}
+
+.btn-group-toggle .btn input {
+  display: none;
+}
+
+.text-center h2, .text-center h3, .text-center h4 {
+  margin-bottom: 15px;
+}
+
+.text-center h3 {
+  margin-top: -10px;
+}
+
+button.btn {
+  width: 150px;
+  font-size: 16px;
+  padding: 10px;
+}
